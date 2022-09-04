@@ -47,4 +47,5 @@ def get_action_id(action_name: str) -> int:
 
     if action_id is None:
         return 0
+
     return action_id

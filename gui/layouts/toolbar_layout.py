@@ -9,11 +9,13 @@ from gui.layouts.toolbar.insert_toolbar_layout import InsertToolbarLayout
 from gui.layouts.toolbar.page_layout_toolbar_layout import PageLayoutToolbarLayout
 from gui.layouts.toolbar.tax_toolbar_layout import TaxToolbarLayout
 from gui.layouts.toolbar.view_toolbar_layout import ViewToolbarLayout
+from gui.layouts.toolbar.tally_utility_toolbar_layout import TallyUtilityToolbarLayout
 
 
 class ToolBarLayout(QTabWidget):
     def __init__(self):
         super().__init__()
+        self.addTab(TallyUtilityToolbarLayout(), "Tally Utility")
         self.addTab(FileToolbarLayout(), "File")
         self.addTab(HomeToolbarLayout(), "Home")
         self.addTab(TaxToolbarLayout(), "Tax")

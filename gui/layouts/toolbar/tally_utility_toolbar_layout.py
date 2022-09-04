@@ -7,7 +7,7 @@ from interface.Message import IMessage
 from services.events import Broker
 
 
-class FileToolbarLayout(QWidget):
+class TallyUtilityToolbarLayout(QWidget):
     def __init__(self):
         super().__init__()
         self.broker = Broker()  # type: ignore
@@ -22,10 +22,11 @@ class FileToolbarLayout(QWidget):
 
         # Buttons start
         self.buttonAddVoucher = NoStyleQToolButton(self)
-        self.buttonAddVoucher.setText("Add Voucher")
+        self.buttonAddVoucher.setText("Journal")
         self.buttonAddVoucher.clicked.connect(  # type: ignore
             lambda: self.broker.emit(
-                IMessage(name=MAIN_GUI_SHEET_LAUNCH, value="PageVoucher")
+                IMessage(name=MAIN_GUI_SHEET_LAUNCH,
+                         value="ExcelToJournalTallyUtility")
             )
         )
         self.buttonAddLedger = NoStyleQToolButton(self)

@@ -1,5 +1,3 @@
-tk
-PyQt6
 PySide6
-pyqt6-tools
 sqlmodel
+reactivex
